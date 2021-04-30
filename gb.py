@@ -189,7 +189,7 @@ class Gigabot():
 
 
 	def login(self):
-		payload = {"msisdn":"244945201405","operatorId":391,"pin":0}
+		payload = {"msisdn":"244945201405",oprd":391,"pin":0}
 		login = self._session.post("http://giga.unitel.ao/api/player/login", auth=HTTPBasicAuth(self._token,""), json=payload, headers=self._answer_headers)
 		self.token_logged = get_token_logged(login)
 		self.player_headers_logged = player_header(self.token_logged)
